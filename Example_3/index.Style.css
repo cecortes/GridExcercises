@@ -60,7 +60,7 @@ h2 {
 
 .card_l {
   /* row start / column start / row end / column end */
-  grid-area: 3 / 1 / 4 / 3;
+  grid-area: 3 / 1 / 4 / 2;
   background-color: var(--colorGray);
   display: flex;
   justify-content: center;
