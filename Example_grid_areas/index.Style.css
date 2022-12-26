@@ -1,0 +1,123 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap");
+
+:root {
+  --mainFont: "Montserrat", sans-serif;
+  --colorGreen: #00bfa6;
+  --colorGray: #a19e9e;
+  --colorOrange: #ff6f00;
+  --colorWhite: #c2c69e;
+  --colorBlack: #373333dd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--mainFont);
+  font-size: 1.6rem;
+}
+
+/* --> Mobile First */
+/* --> Grid Container <-- */
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 1.6fr 0.7fr 1.6fr 0.6fr;
+  grid-template-areas:
+    "menubar menubar"
+    "hero hero"
+    "contenido contenido"
+    "card1 card2"
+    "contact contact"
+    "footer footer";
+  grid-gap: 1rem;
+  width: 100vw;
+  height: 320vh;
+}
+
+.menu_container {
+  grid-area: menubar;
+  background-color: var(--colorOrange);
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.hero_container {
+  grid-area: hero;
+  background-color: var(--colorGreen);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_container {
+  grid-area: contenido;
+  background-color: var(--colorGray);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card1_container {
+  grid-area: card1;
+  background-color: var(--colorWhite);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card2_container {
+  grid-area: card2;
+  background-color: var(--colorWhite);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact_container {
+  grid-area: contact;
+  background-color: var(--colorOrange);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--colorGreen);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --> Desktop */
+@media (min-width: 768px) {
+  .grid__container {
+    grid-template-columns: 1fr 4fr 2fr 2.5fr;
+    grid-template-rows: 2fr 1fr 1fr 0.5fr;
+    grid-template-areas:
+      "menubar hero hero hero"
+      "menubar contenido contenido card1"
+      "menubar contenido contenido card2"
+      "footer footer footer footer";
+    height: 100vh;
+  }
+  .contact_container {
+    display: none;
+  }
+}
