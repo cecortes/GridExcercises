@@ -1,0 +1,159 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap");
+
+:root {
+  --mainFont: "Montserrat", sans-serif;
+  --colorGreen: #00bfa6;
+  --colorGray: #a19e9e;
+  --colorOrange: #ff6f00;
+  --colorWhite: #c2c69e;
+  --colorBlack: #373333dd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--mainFont);
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--colorBlack);
+  letter-spacing: 0.2rem;
+}
+
+/* --> Mobile First <-- */
+/* --> Grid Container <-- */
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-template-areas:
+    "menubar menubar menubar menubar menubar"
+    "card1 card1 card1 card2 card2"
+    "card1 card1 card1 card2 card2"
+    "contenido contenido contenido contenido contenido"
+    "contenido contenido contenido contenido contenido"
+    "contenido contenido contenido contenido contenido"
+    "contenido contenido contenido contenido contenido"
+    "contenido contenido contenido contenido contenido"
+    "card3 card3 card3 card4 card4"
+    "card3 card3 card3 card4 card4"
+    "card5 card5 card5 card6 card6"
+    "card5 card5 card5 card6 card6"
+    "footer footer footer footer footer";
+  grid-gap: 1rem;
+  width: 100vw;
+  height: 200vh;
+}
+
+#menu {
+  grid-area: menubar;
+  background-color: var(--colorOrange);
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+}
+
+.card1 {
+  grid-area: card1;
+  background-color: var(--colorGreen);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  grid-area: card2;
+  background-color: var(--colorGray);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  grid-area: contenido;
+  background-color: var(--colorWhite);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card3 {
+  grid-area: card3;
+  background-color: var(--colorGreen);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card4 {
+  grid-area: card4;
+  background-color: var(--colorGray);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card5 {
+  grid-area: card5;
+  background-color: var(--colorGreen);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card6 {
+  grid-area: card6;
+  background-color: var(--colorGray);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer {
+  grid-area: footer;
+  background-color: var(--colorBlack);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --> Large Screen <-- */
+@media (min-width: 768px) {
+  .grid__container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+      "menubar menubar contenido contenido contenido contenido"
+      "menubar menubar contenido contenido contenido contenido"
+      "menubar menubar contenido contenido contenido contenido"
+      "menubar menubar contenido contenido contenido contenido"
+      "menubar menubar contenido contenido contenido contenido"
+      "menubar menubar card1 card1 card3 card4"
+      "menubar menubar card1 card1 card3 card4"
+      "menubar menubar card2 card2 card5 card6"
+      "menubar menubar card2 card2 card5 card6"
+      "footer footer footer footer footer footer";
+    height: 100vh;
+  }
+
+  #menu {
+    justify-content: center;
+  }
+}
